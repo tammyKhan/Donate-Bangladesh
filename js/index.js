@@ -1,31 +1,18 @@
-/**
- * s-1: display only tab section ✅
- * s-2: set event handler to donate now btn ✅
- * s-3: use reusable function to get input value or innertext ✅
- * s-4:adding validation ✅
- * s-5: added input amount with donation amount ✅
- * s-6: subtracting input amount from available balance ✅
- * s-7: display them in UI ✅
- * s-8:added modal ✅
- * s-9:in history tab show appended text ✅
- */
 
 // blog page start
 document.getElementById("blog-page").addEventListener("click", function(){
-  window.location.href = '/blog.html';
+  window.location.href = './blog.html';
 
 })
-
-
 // blog page end
 
-const accountBalance = getTextFieldValueById("account-balance");
+// const accountBalance = getTextFieldValueById("account-balance");
 
 // donate now btn 01 start
 const donateButton01 = document.getElementById("donate-now-btn-01");
 donateButton01.addEventListener("click", function(){
   const inputAmount01 =  getInputFieldValueById("input-amount-01");
-  // const accountBalance = getTextFieldValueById("account-balance");
+  const accountBalance = getTextFieldValueById("account-balance");
 
    if(isNaN(inputAmount01) || inputAmount01 <= 0 || inputAmount01 > accountBalance){
 
@@ -48,7 +35,9 @@ donateButton01.addEventListener("click", function(){
   //  added to donation history
      const title01 = document.getElementById("title-01").innerText;
      addToHistory(inputAmount01, title01);
+
    }
+
 })
 // donate now btn 01 end
 
@@ -56,7 +45,7 @@ donateButton01.addEventListener("click", function(){
 const donateButton02 = document.getElementById("donate-now-btn-02");
 donateButton02.addEventListener("click", function(){
   const inputAmount02 =  getInputFieldValueById("input-amount-02");
-  // const accountBalance = getTextFieldValueById("account-balance");
+ const accountBalance = getTextFieldValueById("account-balance");
 
    if(isNaN(inputAmount02) || inputAmount02 <= 0 || inputAmount02 > accountBalance){
 
@@ -88,7 +77,7 @@ donateButton02.addEventListener("click", function(){
 const donateButton03 = document.getElementById("donate-now-btn-03");
 donateButton03.addEventListener("click", function(){
   const inputAmount03 =  getInputFieldValueById("input-amount-03");
-  // const accountBalance = getTextFieldValueById("account-balance");
+  const accountBalance = getTextFieldValueById("account-balance");
 
    if(isNaN(inputAmount03) || inputAmount03 <= 0 || inputAmount03 > accountBalance){
 

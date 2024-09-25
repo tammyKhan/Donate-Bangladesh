@@ -33,7 +33,7 @@
 
   historyItem.innerHTML = `
         <p class="text-base ">${inputAmount} Taka is Donated for ${title}</p>
-        <p class="text-sm bg-slate-50 rounded-lg p-3">${new Date().toLocaleDateString()}</p>
+        <p class="text-sm bg-slate-50 rounded-lg p-3">${new Date().toLocaleString()}</p>
         
     `;
   const historyContainer = document.getElementById("history-container");
